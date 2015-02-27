@@ -8,6 +8,10 @@ Ext.define('WorkingWaterfronts.controller.List', {
 	alias: 'cont',
 	config: {
 		refs: {
+			listback: 'listback',
+			detailback: 'detailback',
+			infoback: 'infoback',
+			specificback: 'specificback',
 			homeView: 'home',
 			listView: 'listview',
 			detailView: 'detail',
@@ -53,6 +57,12 @@ Ext.define('WorkingWaterfronts.controller.List', {
 				viewBackInfoCommand: 'onViewBackInfoCommand',
 				viewBackHomeCommand: 'onViewBackHomeCommand'
 			}
+		},
+		routes: {
+			'listback': 'onViewBackHomeCommand',
+			'detailback': 'onViewBackListCommand',
+			'infoback': 'onViewBackDetailCommand',
+			'specificback': 'onViewBackInfoCommand'
 		}
 	},
 	slideLeftTransition: {
